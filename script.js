@@ -25,19 +25,26 @@ primeDivisor = (val)=>{
 }
 findPrimes = (l,r)=>{
     ar=[]
-    sv();
+   // console.log('find primes is called',l,r)
     ind=0
-    for(i=2; i<=r; i+=2){
-        if(mp[i]==undefined){
-            ar[ind++]=i;
+        for(i=l; i<=r; i++){
+            if(mp[i]==undefined){
+                ar[ind++]=i;
+          //      console.log(i)
+    
+            }
+           // else console.log(i,'is not prime')
+         //   console.log(i)
+
         }
-    }
+    
     return ar
 }
 
 
 $('#inp').on('change',()=>{
     
+    sv();
     fVals = $('#inp').val();
     flag = 0
     vals=""
@@ -71,22 +78,28 @@ $('#inp').on('change',()=>{
         if(arr[0]>arr[1]){
             [arr[0], arr[1]]=[arr[1],arr[0]]
         }
+        
         ind=0;
         r=arr[1]
         for(l=arr[0]; l<=r; l++){
             arr[ind++]=l;
-            mn=Math.min(mn,arr[ind])
-            mx=Math.max(mx,arr[ind])
+            mn=Math.min(mn,arr[ind-1])
+            mx=Math.max(mx,arr[ind-1])
         }
     }
-    console.log(arr,mn,mx)
-    for(var i=0; i<arr.length; i++){
-      //  console.log(arr[i],': ',primeDivisor(arr[i]))
-    }
+    
+    // for(var i=0; i<arr.length; i++){
+    //   //  console.log(arr[i],': ',primeDivisor(arr[i]))
+    // }
     //sv();
+   // findPrimes(1,10);
     if(flag){
-        primes = findPrimes(arr[0],arr[1]);
-        console.log('primes',primes)
+        
+        primes=findPrimes(arr[0],arr[arr.length-1]);
+        console.log(primes)
+        
     }
+   // sv();
+    //for(i=2; i<40;i++)if(mp[i]==undefined)console.log(i)
 
 })
