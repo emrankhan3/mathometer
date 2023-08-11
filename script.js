@@ -9,7 +9,16 @@ sv = ()=>{
         }
     }
 }
-
+kadanesAlg = (ar)=>{
+    m = 0
+    ans = 0
+    for(i=0; i<ar.length; i++){
+        m+=ar[i];
+        m=Math.max(m,0)
+        ans=Math.max(m,ans)
+    }
+    return ans;
+}
 
 primeDivisor = (val)=>{
     ar=[]
@@ -49,18 +58,18 @@ $('#inp').on('change',()=>{
     flag = 0
     vals=""
     for(var i=0; i<fVals.length; i++){
-        if(fVals[i]=='-'){
+        if(fVals[i]==':'){
             flag=1;
         }
     }
     ind=0;
     for(var i=0; i<fVals.length; i++){
-        if( (fVals[i]>'9'||fVals[i]<'0' ) ){
+        if( (fVals[i]>'9'||fVals[i]<'0' && fVals[i]!='-') ){
             fVals[i] =' '
             if(vals.length>0 && vals[vals.length-1]==' ')continue;
             if(vals.length==0)continue;
             vals+=' '
-            console.log(fVals[i] )
+            // console.log(fVals[i] )
         }else vals+=fVals[i];
     }
     vals = vals.trim();
@@ -96,10 +105,11 @@ $('#inp').on('change',()=>{
     if(flag){
         
         primes=findPrimes(arr[0],arr[arr.length-1]);
-        console.log(primes)
+      //  console.log(primes)
         
     }
    // sv();
     //for(i=2; i<40;i++)if(mp[i]==undefined)console.log(i)
-
+    console.log(arr);
+    console.log(kadanesAlg(arr));
 })
