@@ -19,6 +19,29 @@ kadanesAlg = (ar)=>{
     }
     return ans;
 }
+LIS = (ar)=>{
+    ans = [];
+    idx=0;
+    binarySearch = (ar,val) =>{
+        l=0,r=ar.length;
+        while(l<r){
+            mid = Math.floor((r+l)/2);
+          //  console.log(l,r,mid);
+            if(ar[mid]<val)l=mid+1;
+            else r=mid;
+        }
+        return l;
+    }
+    ans[0]=ar[0];
+
+    for(i=1; i<ar.length; i++){
+        if(binarySearch(ans,ar[i])==ans.length){
+            ans[ans.length]=ar[i];
+        }
+        else ans[binarySearch(ans,ar[i])]=ar[i];
+    }
+    return ans;
+}
 
 primeDivisor = (val)=>{
     ar=[]
@@ -111,5 +134,8 @@ $('#inp').on('change',()=>{
    // sv();
     //for(i=2; i<40;i++)if(mp[i]==undefined)console.log(i)
     console.log(arr);
-    console.log(kadanesAlg(arr));
+    console.log('lis: ',LIS(arr));
+
+
+    
 })
