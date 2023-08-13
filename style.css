@@ -661,8 +661,24 @@ video {
   border-width: 1px;
 }
 
-.bg-\[\#e3f1f2eb\]{
-  background-color: #e3f1f2eb;
+.bg-\[\#51bcb9\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(81 188 185 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#e9ffea\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 255 234 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ffffff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-blue-300{
@@ -673,11 +689,6 @@ video {
 .bg-blue-600{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-
-.bg-green-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-400{
@@ -695,34 +706,46 @@ video {
   background-color: rgb(192 132 252 / var(--tw-bg-opacity));
 }
 
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-100{
+.bg-\[\#d0f0ef\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+  background-color: rgb(208 240 239 / var(--tw-bg-opacity));
 }
 
-.bg-black{
+.bg-\[\]{
+  background-color: ;
+}
+
+.bg-\[r\]{
+  background-color: r;
+}
+
+.bg-\[rd\]{
+  background-color: rd;
+}
+
+.bg-\[red\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1500ff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 0 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#b3adfd\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(179 173 253 / var(--tw-bg-opacity));
 }
 
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .px-3{
@@ -733,6 +756,11 @@ video {
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pt-10{
