@@ -19,6 +19,14 @@ kadanesAlg = (ar)=>{
     }
     return ans
 }
+sorted = (ar)=>{
+     arr =[];
+     for(i=0; i<ar.length;i++){
+        arr[i]=ar[i]
+     }
+     arr.sort((a,b)=>a-b)
+    return arr
+}
 LIS = (ar)=>{
     ans = [];
     idx=0;
@@ -42,8 +50,7 @@ LIS = (ar)=>{
     }
     return ans;
 }
-
-primeDivisor = (val)=>{
+divisors = (val)=>{
     ar=[]
     ind=0
     for(i=1; i*i<=val; i++){
@@ -55,10 +62,24 @@ primeDivisor = (val)=>{
     ar.sort((a,b)=>a-b);
     return ar
 }
+primeDivisors = (val)=>{
+    ar=[]
+    idx=0
+    for(i=2; i<val;i++){
+        if(val%i==0){
+            ar[idx++]=i;
+            while(val%i==0){val=val/i}
+        }
+
+    }
+    if(val!=1)ar[idx]=val
+    return ar;
+}
 findPrimes = (l,r)=>{
     ar=[]
    // console.log('find primes is called',l,r)
     ind=0
+    if(l<2)l=2;
         for(i=l; i<=r; i++){
             if(mp[i]==undefined){
                 ar[ind++]=i;
@@ -97,7 +118,7 @@ $('#inp').on('change',()=>{
     }
     vals = vals.trim();
     arr = vals.split(" ");
-    
+    sum=0;
     mn=999999999999999
     mx=-999999999999999
     for(var i=0; i<arr.length; i++){
@@ -120,7 +141,7 @@ $('#inp').on('change',()=>{
         }
     }
     
-    // for(var i=0; i<arr.length; i++){
+     for(var i=0; i<arr.length; i++){sum+=arr[i]}
     //   //  console.log(arr[i],': ',primeDivisor(arr[i]))
     // }
     //sv();
@@ -133,9 +154,68 @@ $('#inp').on('change',()=>{
     }
    // sv();
     //for(i=2; i<40;i++)if(mp[i]==undefined)console.log(i)
-    console.log(arr);
-    console.log('lis: ',LIS(arr));
-
-
     
+
+
+
+    prop = `minimum value: <span class='prop'> ${mn}</span>, maximum value:   <span class='prop'>${mx}</span>, sum: <span class='prop'>${sum}</span>`;
+
+
+
+    tr = arr.slice();
+
+    tr.sort((a,b)=>a-b)
+    st=""
+    tr.forEach(element => {
+      st+=' '+element  
+    });
+    
+    // rendering begins here/..................
+    $('#prop').html(prop)
+    
+    if(!flag)$('#sort').html(st)
+    
+    if(flag){
+        console.log("heere")
+        _primes = findPrimes(mn,mx);
+        st = "";
+        console.log(_primes)
+        for(i=0; i<_primes.length; i++){
+            temp= ` ${_primes[i]}`
+            st+=temp;
+        }
+        console.log(st)
+        $('#primes').html(st)
+    }
+    divisorsStr = '';
+    for(i=0; i<arr.length; i++){
+        divisorsStr+=`${arr[i]}: `;
+        pd = divisors(arr[i]);
+        for(j=0; j<pd.length;j++){
+            s = `${pd[j]} `
+            divisorsStr+=s
+        }
+        divisorsStr+=`<br>`
+    }    
+    $('#divisors').html(divisorsStr)
+   
+    primeDivStr=''
+    for(i=0; i<arr.length; i++){
+        primeDivStr+=`${arr[i]}: `;
+        pd = primeDivisors(arr[i]);
+        for(j=0; j<pd.length;j++){
+            s = `${pd[j]} `
+            primeDivStr+=s
+        }
+        primeDivStr+=`<br>`
+    }
+    $('#prime_div').html(primeDivStr)
+    kad = kadanesAlg(arr)
+    kadStr = ''
+    for(i=0; i<kad.length;i++){
+        st = `${kad[i]} `;
+        kadStr+=st;
+    }
+    console.log('kad ',kad)
+    $('#kad').html(kadStr)
 })
