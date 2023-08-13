@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mathometer</title>
     <link rel="shortcut icon" href="img/title.png" type="image/xicon" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mystyle.css">
-</head>
-<body class="mx-auto w-full bg-[#e3f1f2eb] text-[#5d5a6b] sm:w-[90%]  ">
-
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body class="mx-auto w-full bg-[#e3f1f2eb] text-[#5d5a6b] sm:w-[90%]">
     <!-- Header -->
-    <header class="h-16 w-full flex top-0 bg-red-300 justify-between sm:w-[90%] mx-auto fixed">
-        <div class="h-16" class="logo">
-            <img class="h-16" src="img/title.png" alt="">
+    <header
+      class="h-16  w-full flex top-0 bg-red-300 justify-between sm:w-[90%] mx-auto fixed"
+    >
+      <div class="h-16" class="logo">
+        <img class="h-16" src="img/title.png" alt="" />
+      </div>
+
+      <div class="cont flex">
+        <div class="ml-5 flex text-xl justify-center items-center">
+          <a href="">Category</a>
         </div>
-        
-        <div class="cont flex">
-            <div class="ml-5 flex text-xl justify-center items-center"><a href="">Category</a></div>
-            <div class="ml-5 flex mr-2 text-xl justify-center items-center"><a href="">about</a></div>
+        <div class="ml-5 flex mr-2 text-xl justify-center items-center">
+          <a href="">about</a>
         </div>
+      </div>
     </header>
     <!-- Main -->
-    <main class="bg-yellow-100 mt-16 pt-10 ">
-        
-        <h2>this is he2</h2>
-    
-        <div class="bg-green-300 w-full flex justify-center rounded-md">
-            <input id="inp" class=" px-2 py-2 mx-auto h-10 w-[700px] overflow-hidden outline-none focus:outline-none rounded-md focus:border-[1px] focus:border-green-400  " type="text" placeholder="enter the values (e.g. 1,5,6 )  or range (e.g. 1-10) ">
-        </div>        
+    <main class="bg-yellow-100 mt-16 pt-10">
+      <h2>this is he2</h2>
 
-        <div id="prop">
-           
+      <div class="bg-green-300 w-full flex justify-center rounded-md">
+        <div>
+
+            <input
+            id="inp"
+            class="px-2 py-2 mx-auto h-10 w-[700px] overflow-hidden outline-none focus:outline-none rounded-md focus:border-[1px] focus:border-green-400"
+            type="text"
+            placeholder="enter the values (e.g. 1,5,6 )  or range (e.g. 1-10) "
+            />
+            <!-- <button id="button" class="bg-white px-3 py-1 rounded-md">go!</button> -->
         </div>
+    </div>
 
-        <div id="sort">
-            
-        </div>
-        
-        <div id="primes">
-            
-        </div>
+      <div id="prop"></div>
 
-        <div class="prime-div">
-            <div id="prime_div" class="bg-gray-400">
-                
-            </div>
-        </div>
-        <div class="divisor">
+      <div id="sort"></div>
 
-            <div id="divisors" class="bg-blue-400">
-            </div>
-        </div>
-        
-        <div id="kad" class="bg-purple-300">
+      <div id="primes" class="bg-purple-400"></div>
 
-        </div>
+      <div id="lis" class="bg-black text-white"></div>
 
-        <div id="lis">
+      <div class="prime-div bg-indigo-400">
+        <img class="down" src="img/down.png" alt="" />
+        <!-- <img class="up" src="img/up.png" alt=""> -->
+        <div id="prime_div"
+          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"
+        ></div>
+      </div>
 
-        </div>
-
-
-
+      <div class="divisor">
+        <div id="divisors" 
+          class=" bg-orange-300 grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"></div>
+      </div>
     </main>
-    
-    <!-- footer -->
-    <footer>
-        
-    </footer>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
-    <script src="jQuery.js"></script>
+    <!-- footer -->
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- <script src="jQuery.js"></script> -->
     <script src="script.js"></script>
-</body>
-    </html>
+  </body>
+</html>

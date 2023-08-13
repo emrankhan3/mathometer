@@ -79,6 +79,8 @@ primeDivisors = (val)=>{
 }
 findPrimes = (l,r)=>{
     ar=[]
+    
+    sv();
    // console.log('find primes is called',l,r)
     ind=0
     if(l<2)l=2;
@@ -96,10 +98,9 @@ findPrimes = (l,r)=>{
     return ar
 }
 
-
+// $('button').on('click',()=>{
 $('#inp').on('change',()=>{
     
-    sv();
     fVals = $('#inp').val();
     flag = 0
     vals=""
@@ -172,28 +173,28 @@ $('#inp').on('change',()=>{
     });
     
     
-    divisorsStr = '';
-    
-    for(i=0; i<arr.length; i++){
-        divisorsStr+=`${arr[i]}: `;
-        pd = divisors(arr[i]);
-        for(j=0; j<pd.length;j++){
-            s = `${pd[j]} `
-            divisorsStr+=s
-        }
-        divisorsStr+=`<br>`
-    }    
     
     primeDivStr=''
     for(i=0; i<arr.length; i++){
-        primeDivStr+=`${arr[i]}: `;
+        primeDivStr+=`<div class="prime-divsor bg-blue-600">${arr[i]}: `;
         pd = primeDivisors(arr[i]);
         for(j=0; j<pd.length;j++){
             s = `${pd[j]} `
             primeDivStr+=s
         }
-        primeDivStr+=`<br>`
+        primeDivStr+=`</div>`
     }
+    divisorsStr = '';
+    
+    for(i=0; i<arr.length; i++){
+        divisorsStr+=`<div class="divisor bg-blue-300">${arr[i]}: `;
+        pd = divisors(arr[i]);
+        for(j=0; j<pd.length;j++){
+            s = `${pd[j]} `
+            divisorsStr+=s
+        }
+        divisorsStr+=`</div>`
+    }    
     kad = kadanesAlg(arr)
 
     prop = `minimum value: <span class='prop'> ${mn}</span>, maximum value:   <span class='prop'>${mx}</span>, sum: <span class='prop'>${sum}, maximum substring sum: ${kad}</span>`;
@@ -211,8 +212,9 @@ $('#inp').on('change',()=>{
     if(flag){
         console.log("heere")
         _primes = findPrimes(mn,mx);
-        st = "";
-        console.log(_primes)
+        st = `[Number of primes: ${_primes.length}]: `;
+     //   console.log(_primes)
+
         for(i=0; i<_primes.length; i++){
             temp= ` ${_primes[i]}`
             st+=temp;
