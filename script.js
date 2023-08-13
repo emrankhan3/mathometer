@@ -234,15 +234,24 @@ $('#inp').on('change',()=>{
     $('#divisors').html(divisorsStr)
 //$('#kad').html(kadStr)
     $('#prime_div').html(primeDivStr)
+    if(!flag)$('#lis').html(lisStr)
     
     $('.up').toggleClass('hidden');
     $('.down').toggleClass('hidden');
-    if(!flag)$('#lis').html(lisStr)
     $('.prime-div').click(()=>{
         $('#prime_div').slideToggle();
         
         $('.up').toggleClass('hidden');
         $('.down').toggleClass('hidden');
+    })
+    
+    $('.up2').toggleClass('hidden');
+    $('.down2').toggleClass('hidden');
+    $('.divisors').click(()=>{
+        $('#divisors').slideToggle();
+        
+        $('.up2').toggleClass('hidden');
+        $('.down2').toggleClass('hidden');
     })
     
 })
