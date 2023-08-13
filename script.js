@@ -1,3 +1,5 @@
+
+
 mp={}
 sv = ()=>{
 
@@ -101,6 +103,8 @@ findPrimes = (l,r)=>{
 // $('button').on('click',()=>{
 $('#inp').on('change',()=>{
     
+      //  $('#primes').removeClass('hidden')
+    
     fVals = $('#inp').val();
     flag = 0
     vals=""
@@ -167,9 +171,9 @@ $('#inp').on('change',()=>{
     tr = arr.slice();
     
     tr.sort((a,b)=>a-b)
-    st=""
+    srt=""
     tr.forEach(element => {
-        st+=' '+element  
+        srt+=`${element} `  
     });
     
     
@@ -207,9 +211,10 @@ $('#inp').on('change',()=>{
     }
     
     // rendering begins here/..................
-    if(!flag)$('#sort').html(st)
-    
+    if(!flag)$('#sort').html(srt)
+    console.log(st)
     if(flag){
+        $('#primes').removeClass('hidden')
         console.log("heere")
         _primes = findPrimes(mn,mx);
         st = `[Number of primes: ${_primes.length}]: `;
@@ -222,6 +227,7 @@ $('#inp').on('change',()=>{
         console.log(st)
         $('#primes').html(st)
     }
+   // if(!flag){        $('#primes').removeClass('hidden')    }
     $('#prop').html(prop)
     $('#divisors').html(divisorsStr)
 //$('#kad').html(kadStr)
