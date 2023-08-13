@@ -176,7 +176,7 @@ $('#inp').on('change',()=>{
     
     primeDivStr=''
     for(i=0; i<arr.length; i++){
-        primeDivStr+=`<div class="prime-divsor bg-blue-600">${arr[i]}: `;
+        primeDivStr+=`<div class="prime-divsor shadow-md px-2 py-1 rounded-md bg-[#ffffff]">${arr[i]}: `;
         pd = primeDivisors(arr[i]);
         for(j=0; j<pd.length;j++){
             s = `${pd[j]} `
@@ -187,7 +187,7 @@ $('#inp').on('change',()=>{
     divisorsStr = '';
     
     for(i=0; i<arr.length; i++){
-        divisorsStr+=`<div class="divisor bg-blue-300">${arr[i]}: `;
+        divisorsStr+=`<div class="divisor shadow-md px-2 py-1 rounded-md bg-[#ffffff]">${arr[i]}: `;
         pd = divisors(arr[i]);
         for(j=0; j<pd.length;j++){
             s = `${pd[j]} `

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Lobster&family=Montserrat:ital,wght@0,100;0,300;0,700;0,800;1,200;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Lobster&family=Montserrat:ital,wght@0,100;0,300;0,700;0,800;1,200;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:ital@1&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Varela+Round&display=swap');
 
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
@@ -577,6 +577,18 @@ video {
   margin-top: 4rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .block{
   display: block;
 }
@@ -657,13 +669,32 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-sm{
+  border-radius: 0.125rem;
+}
+
 .border{
   border-width: 1px;
 }
 
-.bg-\[\#51bcb9\]{
+.bg-\[\#b3adfd\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(81 188 185 / var(--tw-bg-opacity));
+  background-color: rgb(179 173 253 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d0f0ef\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 240 239 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d4ffe0\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 255 224 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d6eefd\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 238 253 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#e9ffea\]{
@@ -691,19 +722,9 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-.bg-indigo-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-}
-
 .bg-orange-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
-.bg-purple-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -711,90 +732,51 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#d0f0ef\]{
+.bg-\[blue\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(208 240 239 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[orange\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 165 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#00bbff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 187 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d9f5ff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 245 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#cfedff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 237 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#d9fffb\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 255 251 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#c7fff9\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(199 255 249 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#\]{
+  background-color: #;
 }
 
 .bg-\[\]{
   background-color: ;
 }
 
-.bg-\[r\]{
-  background-color: r;
-}
-
-.bg-\[rd\]{
-  background-color: rd;
-}
-
-.bg-\[red\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#1500ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 0 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b3adfd\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(179 173 253 / var(--tw-bg-opacity));
-}
-
-.bg-\[re\]{
-  background-color: re;
-}
-
-.bg-\[\#00ff99\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 255 153 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#dbfff1\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 255 241 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ffdbf2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 219 242 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#dbf1ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 241 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#badcf1\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(186 220 241 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b7e3ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(183 227 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#d6eefd\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 238 253 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#5500ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(85 0 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#e3d4ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(227 212 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#d4ffe0\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 255 224 / var(--tw-bg-opacity));
+.p-5{
+  padding: 1.25rem;
 }
 
 .px-2{
@@ -821,8 +803,21 @@ video {
   padding-top: 2.5rem;
 }
 
+.font-varela{
+  font-family: Varela, Round;
+}
+
+.font-sans{
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .text-xl{
   font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
@@ -834,6 +829,18 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none{
