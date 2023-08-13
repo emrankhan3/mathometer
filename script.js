@@ -53,6 +53,7 @@ LIS = (ar)=>{
 divisors = (val)=>{
     ar=[]
     ind=0
+    if(val<0)val*=-1
     for(i=1; i*i<=val; i++){
         if(val%i==0){
             ar[ind++]=i;
@@ -65,6 +66,7 @@ divisors = (val)=>{
 primeDivisors = (val)=>{
     ar=[]
     idx=0
+    if(val<0)val*=-1
     for(i=2; i<val;i++){
         if(val%i==0){
             ar[idx++]=i;
@@ -119,6 +121,7 @@ $('#inp').on('change',()=>{
     vals = vals.trim();
     arr = vals.split(" ");
     sum=0;
+    isNeg=0
     mn=999999999999999
     mx=-999999999999999
     for(var i=0; i<arr.length; i++){
@@ -157,22 +160,52 @@ $('#inp').on('change',()=>{
     
 
 
-
-    prop = `minimum value: <span class='prop'> ${mn}</span>, maximum value:   <span class='prop'>${mx}</span>, sum: <span class='prop'>${sum}</span>`;
-
-
-
+    
+    
+    
     tr = arr.slice();
-
+    
     tr.sort((a,b)=>a-b)
     st=""
     tr.forEach(element => {
-      st+=' '+element  
+        st+=' '+element  
     });
     
-    // rendering begins here/..................
-    $('#prop').html(prop)
     
+    divisorsStr = '';
+    
+    for(i=0; i<arr.length; i++){
+        divisorsStr+=`${arr[i]}: `;
+        pd = divisors(arr[i]);
+        for(j=0; j<pd.length;j++){
+            s = `${pd[j]} `
+            divisorsStr+=s
+        }
+        divisorsStr+=`<br>`
+    }    
+    
+    primeDivStr=''
+    for(i=0; i<arr.length; i++){
+        primeDivStr+=`${arr[i]}: `;
+        pd = primeDivisors(arr[i]);
+        for(j=0; j<pd.length;j++){
+            s = `${pd[j]} `
+            primeDivStr+=s
+        }
+        primeDivStr+=`<br>`
+    }
+    kad = kadanesAlg(arr)
+
+    prop = `minimum value: <span class='prop'> ${mn}</span>, maximum value:   <span class='prop'>${mx}</span>, sum: <span class='prop'>${sum}, maximum substring sum: ${kad}</span>`;
+    
+    lis = LIS(arr);
+    lisStr = `[size: ${lis.length}]: `;
+    for(i=0; i<lis.length;i++){
+        st = `${lis[i]} `;
+        lisStr+=st;
+    }
+    
+    // rendering begins here/..................
     if(!flag)$('#sort').html(st)
     
     if(flag){
@@ -187,35 +220,10 @@ $('#inp').on('change',()=>{
         console.log(st)
         $('#primes').html(st)
     }
-    divisorsStr = '';
-    for(i=0; i<arr.length; i++){
-        divisorsStr+=`${arr[i]}: `;
-        pd = divisors(arr[i]);
-        for(j=0; j<pd.length;j++){
-            s = `${pd[j]} `
-            divisorsStr+=s
-        }
-        divisorsStr+=`<br>`
-    }    
+    $('#prop').html(prop)
     $('#divisors').html(divisorsStr)
-   
-    primeDivStr=''
-    for(i=0; i<arr.length; i++){
-        primeDivStr+=`${arr[i]}: `;
-        pd = primeDivisors(arr[i]);
-        for(j=0; j<pd.length;j++){
-            s = `${pd[j]} `
-            primeDivStr+=s
-        }
-        primeDivStr+=`<br>`
-    }
+//$('#kad').html(kadStr)
     $('#prime_div').html(primeDivStr)
-    kad = kadanesAlg(arr)
-    kadStr = ''
-    for(i=0; i<kad.length;i++){
-        st = `${kad[i]} `;
-        kadStr+=st;
-    }
-    console.log('kad ',kad)
-    $('#kad').html(kadStr)
+    if(!flag)$('#lis').html(lisStr)
+    
 })
