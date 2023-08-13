@@ -188,6 +188,7 @@ $('#inp').on('change',()=>{
         }
         primeDivStr+=`</div>`
     }
+    
     divisorsStr = '';
     
     for(i=0; i<arr.length; i++){
@@ -211,6 +212,7 @@ $('#inp').on('change',()=>{
     }
     
     // rendering begins here/..................
+    
     if(!flag)$('#sort').html(srt)
     console.log(st)
     if(flag){
@@ -232,6 +234,15 @@ $('#inp').on('change',()=>{
     $('#divisors').html(divisorsStr)
 //$('#kad').html(kadStr)
     $('#prime_div').html(primeDivStr)
+    
+    $('.up').toggleClass('hidden');
+    $('.down').toggleClass('hidden');
     if(!flag)$('#lis').html(lisStr)
+    $('.prime-div').click(()=>{
+        $('#prime_div').slideToggle();
+        
+        $('.up').toggleClass('hidden');
+        $('.down').toggleClass('hidden');
+    })
     
 })

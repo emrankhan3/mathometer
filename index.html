@@ -27,7 +27,7 @@
       </div>
     </header>
     <!-- Main -->
-    <main class=" mt-16 pt-10">
+    <main class=" mt-16 pt-10 bg-[#d4f0f6]">
       <h2>  </h2>
 
       <div class="bg-[#e9ffea] w-full flex justify-center rounded-md">
@@ -52,11 +52,26 @@
       <div id="lis" class="bg-black text-white"></div>
 
       <div class="prime-div bg-[#cfedff] mb-4 p-5">
-        <img class="down" src="img/down.png" alt="" />
+        <div class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md">
+            <div></div>
+            <div class="mx-auto text-center">
+
+                prime divisors
+            </div>
+            <div>
+                <div id="downImg" class="down">
+                    <img class="h-10"  src="img/down.png" alt="" />
+                </div>
+                <div class="up hidden">
+
+                    <img class=" h-10  "  src="img/up.png" alt="" />
+                </div>
+            </div>
+        </div>
         <!-- <img class="up" src="img/up.png" alt=""> -->
         <div id="prime_div"
-          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"
-        ></div>
+          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6">
+        </div>
       </div>
 
       <div class="divisor mb-4 bg-[#c7fff9] p-5">
