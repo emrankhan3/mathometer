@@ -133,6 +133,7 @@ $('#inp').on('change',()=>{
     vals = vals.trim();
     arr = vals.split(" ");
     sum=0;
+    ok = true;
     isNeg=0
     mn=999999999999999
     mx=-999999999999999
@@ -155,13 +156,15 @@ $('#inp').on('change',()=>{
             mx=Math.max(mx,arr[ind-1])
         }
     }
-    
+    if(mx-mx<10000000 && mx<10000000 && mn<10000000){
+        ok=true;
+    }
      for(var i=0; i<arr.length; i++){sum+=arr[i]}
     //   //  console.log(arr[i],': ',primeDivisor(arr[i]))
     // }
     //sv();
    // findPrimes(1,10);
-    if(flag){
+    if(flag && ok){
         
         primes=findPrimes(arr[0],arr[arr.length-1]);
       //  console.log(primes)
@@ -171,21 +174,23 @@ $('#inp').on('change',()=>{
     //for(i=2; i<40;i++)if(mp[i]==undefined)console.log(i)
     
 
-
+    if(mx<100000000 && mx<100000000)ok=true;
     
     
     
     tr = arr.slice();
     
     tr.sort((a,b)=>a-b)
-    srt=""
+    srt="Sorted array: <span class='prop'>"
     tr.forEach(element => {
         srt+=`${element} `  
     });
+    srt+='</span>'
     
     
     
     primeDivStr=''
+    if(ok)
     for(i=0; i<arr.length; i++){
         primeDivStr+=`<div class="prime-divsor shadow-md px-2 py-1 rounded-md bg-[#ffffff]">${arr[i]}: `;
         pd = primeDivisors(arr[i]);
@@ -197,7 +202,7 @@ $('#inp').on('change',()=>{
     }
     
     divisorsStr = '';
-    
+    if(ok)
     for(i=0; i<arr.length; i++){
         divisorsStr+=`<div class="divisor shadow-md px-2 py-1 rounded-md bg-[#ffffff]">${arr[i]}: `;
         pd = divisors(arr[i]);
@@ -212,11 +217,12 @@ $('#inp').on('change',()=>{
     prop = `minimum value: <span class="prop"> ${mn}</span>, maximum value:   <span class="prop shadow-inner bg-white text-black px-3 py-1 rounded-md ">${mx}</span>, sum: <span class='prop'>${sum}</span>, maximum substring sum: <span class='prop'>${kad}</span>`;
     
     lis = LIS(arr);
-    lisStr = `[size: ${lis.length}]: `;
+    lisStr = `Longest Increasing Subsequence [size: ${lis.length}]: <span class='prop'>`;
     for(i=0; i<lis.length;i++){
         st = `${lis[i]} `;
         lisStr+=st;
     }
+    lisStr+='</span>'
     
     // rendering begins here/..................
     
