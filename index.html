@@ -8,95 +8,103 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mystyle.css" />
   </head>
-  <body class="mx-auto font-sans text-lg w-full font-semibold bg-[#ffffff] text-[#464451] sm:w-[90%]">
+  <body
+    class="mx-auto font-sans text-lg w-full font-semibold bg-[#ffffff] text-[#464451] sm:w-[90%]"
+  >
     <!-- Header -->
     <header
-      class="h-16 bg-[#71C9CE] text-base   w-full flex top-0 justify-between sm:w-[90%] mx-auto fixed"
+      class="h-16 bg-[#71C9CE] text-base w-full flex top-0 justify-between sm:w-[90%] mx-auto fixed"
     >
       <div class="h-16" class="logo">
-        <a href="https://xemran.github.io/mathometer"> <img class="h-16" src="img/title.png" alt="" /></a>
+        <a href="https://xemran.github.io/mathometer">
+          <img class="h-16" src="img/title.png" alt=""
+        /></a>
       </div>
 
       <div class="cont flex">
-        <div class="ml-5 flex text-xl justify-center items-center transition-all hover:text-[#938fad]">
+        <div
+          class="ml-5 flex text-xl justify-center items-center transition-all hover:text-[#938fad]"
+        >
           <a href="">Category</a>
         </div>
-        <div class="ml-5 flex mr-2 text-xl justify-center transition-all hover:text-[#938fad] items-center">
-          <a href="">about</a>
+        <div
+          class="ml-5 flex mr-2 text-xl justify-center transition-all hover:text-[#938fad] items-center"
+        >
+          <a href="About">About</a>
         </div>
       </div>
     </header>
     <!-- Main -->
-    <main class=" mt-16 pt-10 bg-[#d4f0f6]">
-      <h2>  </h2>
+    <main class="mt-16 pt-10 bg-[#d4f0f6]">
+      <h2></h2>
 
       <div class="bg-[#e9ffea] w-full flex justify-center rounded-md">
         <div>
-
-            <input
+          <input
             id="inp"
-            class="px-2 py-2 mx-auto h-10 w-[500px] md:w-[700px] overflow-hidden outline-none focus:outline-none rounded-md focus:border-[1px] focus:border-green-400"
+            class="px-2 py-2 mx-auto h-10 w-[500px] md:w-[700px] xl:w-[1000px] overflow-hidden outline-none focus:outline-none rounded-md focus:border-[1px] focus:border-green-400"
             type="text"
             placeholder="enter the values (e.g. 1,5,6 23 4 23 4)  or range (e.g. 1:10) "
-            />
-            <!-- <button id="button" class="bg-white px-3 py-1 rounded-md">go!</button> -->
+          />
+          <!-- <button id="button" class="bg-white px-3 py-1 rounded-md">go!</button> -->
         </div>
-    </div>
+      </div>
 
       <div id="prop" class="mt-2 mb-4"></div>
 
       <div id="sort" class="mb-4"></div>
 
-      <div id="primes" class="bg-[#d4ffe0] mb-4 px-3 py-1 rounded-sm shadow-sm hidden"></div>
+      <div
+        id="primes"
+        class="bg-[#d4ffe0] mb-4 px-3 py-1 rounded-sm shadow-sm hidden"
+      ></div>
 
       <div id="lis" class="bg-black text-white"></div>
 
-
       <!-- Prime divisors -->
       <div class="prime-div bg-[#cfedff] mb-4 p-5">
-        <div class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md">
-            <div></div>
-            <div class="mx-auto text-center">
-
-                prime divisors
+        <div
+          class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md"
+        >
+          <div></div>
+          <div class="mx-auto text-center">prime divisors</div>
+          <div>
+            <div id="downImg" class="down">
+              <img class="h-10" src="img/down.png" alt="" />
             </div>
-            <div>
-                <div id="downImg" class="down">
-                    <img class="h-10"  src="img/down.png" alt="" />
-                </div>
-                <div class="up hidden">
-
-                    <img class=" h-10  "  src="img/up.png" alt="" />
-                </div>
+            <div class="up hidden">
+              <img class="h-10" src="img/up.png" alt="" />
             </div>
+          </div>
         </div>
-        
-        <div id="prime_div"
-          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6">
-        </div>
+
+        <div
+          id="prime_div"
+          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"
+        ></div>
       </div>
-        <!-- All divisors -->
+      <!-- All divisors -->
       <div class="divisors mb-4 bg-[#c7fff9] p-5">
-        <div class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md">
-            <div></div>
-            <div class="mx-auto text-center">
+        <div
+          class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md"
+        >
+          <div></div>
+          <div class="mx-auto text-center">divisors</div>
 
-                 divisors
+          <div>
+            <div class="down2">
+              <img class="h-10" src="img/down.png" alt="" />
             </div>
-
-            <div>
-                <div class="down2">
-                    <img class="h-10"  src="img/down.png" alt="" />
-                </div>
-                <div class="up2 hidden">
-                    <img class=" h-10  "  src="img/up.png" alt="" />
-                </div>
+            <div class="up2 hidden">
+              <img class="h-10" src="img/up.png" alt="" />
             </div>
-
+          </div>
         </div>
-        
-        <div id="divisors" 
-          class="  grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"></div>
+
+        <div
+          id="divisors"
+          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"
+        ></div>
       </div>
     </main>
 
