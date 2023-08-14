@@ -1,5 +1,8 @@
 
-
+$('#menu_bar').click(()=>{
+    $('#drop-down').slideToggle('hidden');
+    console.log("im hit")
+});
 mp={}
 sv = ()=>{
 
@@ -202,7 +205,7 @@ $('#inp').on('change',()=>{
     }    
     kad = kadanesAlg(arr)
 
-    prop = `minimum value: <span class='prop'> ${mn}</span>, maximum value:   <span class='prop'>${mx}</span>, sum: <span class='prop'>${sum}, maximum substring sum: ${kad}</span>`;
+    prop = `minimum value: <span class="prop"> ${mn}</span>, maximum value:   <span class="prop shadow-inner bg-white text-black px-3 py-1 rounded-md ">${mx}</span>, sum: <span class='prop'>${sum}</span>, maximum substring sum: <span class='prop'>${kad}</span>`;
     
     lis = LIS(arr);
     lisStr = `[size: ${lis.length}]: `;
@@ -219,13 +222,14 @@ $('#inp').on('change',()=>{
         $('#primes').removeClass('hidden')
         console.log("heere")
         _primes = findPrimes(mn,mx);
-        st = `[Number of primes: ${_primes.length}]: `;
+        st = `[Number of primes: ${_primes.length}] <span class='prop'>`;
      //   console.log(_primes)
 
         for(i=0; i<_primes.length; i++){
-            temp= ` ${_primes[i]}`
+            temp= `${_primes[i]} `
             st+=temp;
         }
+        st+='</span>'
         console.log(st)
         $('#primes').html(st)
     }
@@ -253,5 +257,6 @@ $('#inp').on('change',()=>{
         $('.up2').toggleClass('hidden');
         $('.down2').toggleClass('hidden');
     })
+
     
 })

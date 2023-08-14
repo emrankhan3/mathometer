@@ -23,17 +23,38 @@
 
       <div class="cont flex">
         <div
-          class="ml-5 flex text-xl justify-center items-center transition-all hover:text-[#938fad]"
+          class="hidden md:flex justify-center items-center ml-5 flex text-xl justify-center items-center transition-all hover:text-[#938fad]"
         >
-          <a href="">Category</a>
+          <a href="Category.html"><span>Category</span></a>
         </div>
         <div
-          class="ml-5 flex mr-2 text-xl justify-center transition-all hover:text-[#938fad] items-center"
+          class="hidden md:flex justify-center items-center ml-5 flex mr-2 text-xl justify-center transition-all hover:text-[#938fad] items-center"
         >
-          <a href="About">About</a>
+          <a href="About"><span>About</span></a>
+        </div>
+
+        <div
+          id="menu_bar"
+          class="flex justify-center items-center md:hidden pr-2"
+        >
+          <img class="h-10 cursor-pointer" src="img/menu.png" alt="" />
         </div>
       </div>
     </header>
+
+    <!-- Drop Down -->
+    <div
+      id="drop-down"
+      class="bg-[#34954760] md:hidden rounded-md shadow-md text-[#6542d8] text-3xl fixed top-16 right-[80px] left-[80px]"
+    >
+      <div class="flex justify-center items-center m-2  px-2 py-1 bottom-1 border-b-2">
+        <a href="Category.html">Category </a>
+      </div>
+      <div class="flex justify-center items-center m-2 mt-0  px-2 ">
+        <a href="About.html">About</a>
+      </div>
+    </div>
+
     <!-- Main -->
     <main class="mt-16 pt-10 bg-[#d4f0f6]">
       <h2></h2>
