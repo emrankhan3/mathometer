@@ -3,6 +3,10 @@ $('#menu_bar').click(()=>{
     $('#drop-down').slideToggle('hidden');
     console.log("im hit")
 });
+console.log("THIs");
+
+// $('#drop-down').addClass('hidden');
+
 mp={}
 sv = ()=>{
 
