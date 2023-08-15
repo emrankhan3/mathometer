@@ -214,10 +214,10 @@ $('#inp').on('change',()=>{
     }    
     kad = kadanesAlg(arr)
 
-    prop = `minimum value: <span class="prop"> ${mn}</span>, maximum value:   <span class="prop shadow-inner bg-white text-black px-3 py-1 rounded-md ">${mx}</span>, sum: <span class='prop'>${sum}</span>, maximum substring sum: <span class='prop'>${kad}</span>`;
+    prop = ` minimum value: <span class="prop"> ${mn}</span>, maximum value:   <span class="prop shadow-inner bg-white text-black px-3 py-1 rounded-md ">${mx}</span>, sum: <span class='prop'>${sum}</span>, maximum substring sum: <span class='prop'>${kad}</span>`;
     
     lis = LIS(arr);
-    lisStr = `Longest Increasing Subsequence [size: ${lis.length}]: <span class='prop'>`;
+    lisStr = ` Longest Increasing Subsequence [size: ${lis.length}]: <span class='prop'>`;
     for(i=0; i<lis.length;i++){
         st = `${lis[i]} `;
         lisStr+=st;
