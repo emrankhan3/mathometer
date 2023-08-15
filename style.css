@@ -661,6 +661,10 @@ video {
   width: 100%;
 }
 
+.w-\[300px\]{
+  width: 300px;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -709,8 +713,8 @@ video {
   border-bottom-width: 2px;
 }
 
-.bg-\[\#0f171ece\]{
-  background-color: #0f171ece;
+.bg-\[\#0f171ea4\]{
+  background-color: #0f171ea4;
 }
 
 .bg-\[\#71C9CE\]{
@@ -766,10 +770,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0f171ea4\]{
-  background-color: #0f171ea4;
 }
 
 .p-1{

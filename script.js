@@ -1,11 +1,22 @@
 
 $('#menu_bar').click(()=>{
-    $('#drop-down').slideToggle('hidden');
+    $('#drop-down').slideToggle('');
+    $('#drop-down').addClass('md:hidden');
+
     console.log("im hit")
 });
-console.log("THIs");
 
-// $('#drop-down').addClass('hidden');
+
+$(window).resize(function() {
+    var width = $(window).width();
+    if (width > 768){
+     // alert('Your screen is too small');
+//alert('The screen width just changed');
+      $("#drop-down").slideUp();
+    }
+  });
+  
+// $('#drop-down').addClass('md:hidden');
 
 mp={}
 sv = ()=>{
