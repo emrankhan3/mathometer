@@ -118,6 +118,21 @@ findPrimes = (l,r)=>{
     return ar
 }
 
+
+phi = (num)=>{
+    n=1;
+    res = num;
+    for(i=2; i<=num; i++){
+        if(num%i==0){
+            n*=((i-1)/i);
+            
+            while(num%i==0)num/=i
+        }
+    }
+    ans = Math.floor(res*n)
+    return ans    
+}
+/////////////////////////////////////////////////////////////////////////////////
 // $('button').on('click',()=>{
 $('#inp').on('change',()=>{
     
@@ -278,6 +293,6 @@ $('#inp').on('change',()=>{
         $('.up2').toggleClass('hidden');
         $('.down2').toggleClass('hidden');
     })
-
+   
     
 })
