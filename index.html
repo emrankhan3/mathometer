@@ -79,10 +79,10 @@
 
       <div
         id="primes"
-        class="bg-[#d4ffe0] mb-4 px-3 py-1 rounded-sm shadow-sm hidden"
+        class="bg-[#d4ffe0] mb-4 mt-2 px-3 py-1 rounded-sm shadow-sm hidden"
       ></div>
      
-          <div id="lis" class="bg-[white] "></div>
+          <div id="lis" class="bg-[white] mt-10 "></div>
         
 
       <!-- Prime divisors -->
@@ -91,7 +91,7 @@
           class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md"
         >
           <div></div>
-          <div class="mx-auto text-center">prime divisors</div>
+          <div class="mx-auto text-center">Prime divisors</div>
           <div>
             <div id="downImg" class="down">
               <img class="h-10" src="img/down.png" alt="" />
@@ -113,7 +113,7 @@
           class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md"
         >
           <div></div>
-          <div class="mx-auto text-center">divisors</div>
+          <div class="mx-auto text-center">All Divisors</div>
 
           <div>
             <div class="down2">
@@ -131,8 +131,27 @@
         ></div>
       </div>
       <!-- Eular Phi -->
-      <div>
-        
+      <div class="totatives mb-4 bg-[#c7fff9] p-5">
+        <div
+          class="flex justify-between bg-slate-400 mb-2 cursor-pointer p-1 rounded-md shadow-md"
+        >
+          <div></div>
+          <div class="mx-auto text-center">Totatives</div>
+
+          <div>
+            <div class="down3">
+              <img class="h-10" src="img/down.png" alt="" />
+            </div>
+            <div class="up3 hidden">
+              <img class="h-10" src="img/up.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="totatives"
+          class="grid gap-5 grid-cols-2 md:grid-cols-3 lg:gird-cols-5 xl:grid-cols-6"
+        ></div>
       </div>
     </main>
 

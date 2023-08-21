@@ -86,6 +86,7 @@ divisors = (val)=>{
 primeDivisors = (val)=>{
     ar=[]
     idx=0
+    if(val<0)val=val*(-1)
     if(val<0)val*=-1
     for(i=2; i<val;i++){
         if(val%i==0){
@@ -121,7 +122,9 @@ findPrimes = (l,r)=>{
 
 phi = (num)=>{
     n=1;
-    res = num;
+    res = Math.abs(num);
+    if(res<0)res*=-1
+    if(num<0)num=num*(-1)
     for(i=2; i<=num; i++){
         if(num%i==0){
             n*=((i-1)/i);
@@ -226,6 +229,13 @@ $('#inp').on('change',()=>{
         }
         primeDivStr+=`</div>`
     }
+    totativesStr='';
+    if(ok)
+    for( i=0; i<arr.length;i++){
+        totativesStr+=`<div class="prime-divsor shadow-md px-2 py-1 rounded-md bg-[#ffffff]">${arr[i]}: `; 
+        tt = `${phi(arr[i])}`;
+        totativesStr+=tt+`</div>`
+    }
     
     divisorsStr = '';
     if(ok)
@@ -275,7 +285,7 @@ $('#inp').on('change',()=>{
 //$('#kad').html(kadStr)
     $('#prime_div').html(primeDivStr)
     if(!flag)$('#lis').html(lisStr)
-    
+    $('#totatives').html(totativesStr)
     $('.up').toggleClass('hidden');
     $('.down').toggleClass('hidden');
     $('.prime-div').click(()=>{
@@ -294,5 +304,13 @@ $('#inp').on('change',()=>{
         $('.down2').toggleClass('hidden');
     })
    
+    $('.up3').toggleClass('hidden');
+    $('.down3').toggleClass('hidden');
+    $('.totatives').click(()=>{
+        $('#totatives').slideToggle();
+        
+        $('.up3').toggleClass('hidden');
+        $('.down3').toggleClass('hidden');
+    })
     
 })
