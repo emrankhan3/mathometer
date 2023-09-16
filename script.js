@@ -226,7 +226,13 @@ $('#inp').on('change',()=>{
         srt+=`${element} `  
     });
     srt+='</span>'
-    
+
+    preSum = prefixSum(arr)
+    preSumStr = "Prefix Sum: <span class='prop'>"
+    for(i=1; i<preSum.length;i++){
+        preSumStr+=`${preSum[i]} `
+    }
+    preSumStr+='</span>'
     
     
     primeDivStr=''
@@ -270,8 +276,9 @@ $('#inp').on('change',()=>{
         lisStr+=st;
     }
     lisStr+='</span>'
-    preSum = prefixSum(arr)
-    preStr='';
+
+
+ 
     // rendering begins here/..................
     
     if(!flag)$('#sort').html(srt)
@@ -298,6 +305,11 @@ $('#inp').on('change',()=>{
     $('#prime_div').html(primeDivStr)
     if(!flag)$('#lis').html(lisStr)
     $('#totatives').html(totativesStr)
+    $('#presum').html(preSumStr)
+
+
+
+
     $('.up').toggleClass('hidden');
     $('.down').toggleClass('hidden');
     $('.prime-div').click(()=>{
