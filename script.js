@@ -98,6 +98,17 @@ primeDivisors = (val)=>{
     if(val!=1)ar[idx]=val
     return ar;
 }
+prefixSum = (ar)=>{
+    ans = [];
+    ans[0]=0;
+    idx=0;
+    
+    for(i=1; i<=ar.length; i++){
+        ans[i]=ans[i-1]+ar[idx];
+        idx++;
+    }
+    return ans;
+}
 findPrimes = (l,r)=>{
     ar=[]
     
@@ -259,7 +270,8 @@ $('#inp').on('change',()=>{
         lisStr+=st;
     }
     lisStr+='</span>'
-    
+    preSum = prefixSum(arr)
+    preStr='';
     // rendering begins here/..................
     
     if(!flag)$('#sort').html(srt)
